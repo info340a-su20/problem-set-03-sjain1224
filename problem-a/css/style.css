@@ -1,4 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex: 1;
+}
+
+.container{
+  display: flex;
+  height: 100%;
+}
+
+.col1, .col2, .col3{
+  padding: 1em;
+}
+
+.col1{
+  flex-basis: 240px;
+}
+
+.col2{
+  flex: 1;
+  background-color: #eee;
+}
+
+.col3{
+  flex-basis: 180px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.card-pool{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card1, .card2, .card3, .card4, .card5{
+  flex: 0 0 250px;
+  background-color: white;
+  margin: .5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+} 
+
+.card1 > p, .card2 > p, .card3 > p, .card4 > p, .card5 > p{
+  padding: .5rem 1rem;
+}
+
+.card1 > img, .card2 > img, .card3 > img, .card4 > img, .card5 > img{
+  border-radius: 10px 10px 0 0;
 }
